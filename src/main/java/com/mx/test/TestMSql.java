@@ -1,12 +1,11 @@
 package com.mx.test;
 
-import java.lang.invoke.VarHandle;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import com.mysql.cj.jdbc.Driver;
-import com.mysql.cj.xdevapi.Statement;
 
 public class TestMSql {
 
@@ -16,7 +15,15 @@ public class TestMSql {
 		try {
 			Connection conexion = DriverManager.getConnection(url,"root","admin");
 			java.sql.Statement instruccion = conexion.createStatement(); 
-			String sql = "SELECT * FROM candidatos LIMIT 100";
+			String sql = "SELECT id,create_time,nombre,direccion,tel_contacto,fecha_nacimiento,tipo_contratacion FROM candidatos";
+			ResultSet  resultado = instruccion.executeQuery(sql);
+			while (resultado.next()) {
+				System.out.println("id Persona:" + resultado.getInt("id"));
+				System.out.println("Nombre:" + resultado.getString("nombre"));
+				
+				
+			}
+			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace(System.out);
