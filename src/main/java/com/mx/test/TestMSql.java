@@ -21,9 +21,8 @@ public class TestMSql {
 			while (resultado.next()) {
 				System.out.println("id Persona:" + resultado.getInt("id"));
 				System.out.println("Nombre:" + resultado.getString("nombre"));
-				
-				
 			}
+			resultado.close();
 			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

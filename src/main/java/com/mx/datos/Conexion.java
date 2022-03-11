@@ -4,7 +4,6 @@ import java.sql.*;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-import com.mysql.cj.protocol.Resultset;
 
 public class Conexion {
 	private static final String  JDBC_URL =  "jdbc:mysql://localhost:3306/usuarios_casting?useSSL=false&useTimezone=UTC&allowPublicKeyRetrieval=true";
@@ -15,7 +14,16 @@ public class Conexion {
 		return DriverManager.getConnection(JDBC_URL,JDBC_USER,JDBC_PASSWORD);
 	}
 	
-	public static void close(Resultset rs) {
-		
+	public static void closeResultSet(ResultSet rs) throws SQLException {
+		rs.close();
+	}
+	public static void closeStatement(Statement smtm) throws SQLException {
+		smtm.close();
+	}
+	public static void closePreparedStatement(PreparedStatement ps) throws SQLException {
+		ps.close();
+	}
+	public static void closeConnection(Connection conn) throws SQLException {
+		conn.close();
 	}
 }
