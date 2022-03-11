@@ -1,8 +1,7 @@
 package com.mx.domain;
 
 public class Cliente {
-	private static final String  JDBC_URL =  "jdbc:mysql://localhost:3306casting?useSSL=false&useTimezone=UTC&allowPublicKeyRetrieval=true";
-
+	
 	String nombre;
 	String dirrecion;
 	String telefono;

@@ -18,5 +18,12 @@ public class ClienteDao {
 		Cliente cliente = null;
 		List<Cliente> clientes = new ArrayList<Cliente>();
 		
+		try {
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		return clientes;
+		
 	}
 }
