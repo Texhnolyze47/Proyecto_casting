@@ -11,7 +11,8 @@ public class TestMSql {
 
 	public static void main(String[] args) {
 		
-		String url =  "jdbc:mysql://localhost:3306/usuarios_casting?useSSL=false&useTimezone=UTC&allowPublicKeyRetrieval=true";
+		 String  url =  "jdbc:mysql://localhost:3306/usuarios_casting?useSSL=false&useTimezone=UTC&allowPublicKeyRetrieval=true";
+		
 		try {
 			Connection conexion = DriverManager.getConnection(url,"root","admin");
 			java.sql.Statement instruccion = conexion.createStatement(); 
@@ -20,9 +21,8 @@ public class TestMSql {
 			while (resultado.next()) {
 				System.out.println("id Persona:" + resultado.getInt("id"));
 				System.out.println("Nombre:" + resultado.getString("nombre"));
-				
-				
 			}
+			resultado.close();
 			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

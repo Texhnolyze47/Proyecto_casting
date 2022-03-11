@@ -1,10 +1,11 @@
 package com.mx.domain;
 
 public class Casting {
-	
+	int idCasting; 
 	String nombre;
 	String Descripcion;
 	String fechaContratacion;
+	float precio;
 	TipoCasting tipoCasting;
 	
 
