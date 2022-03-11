@@ -1,0 +1,101 @@
+clientes
+
+-codigo de cliente
+-nombre
+-direccion
+-telefono
+-persona de contacto
+-actividad a realizar (publicidad o moda)
+
+
+*empresa de moda
+
+*empresa de publicidad y cine
+
+
+---------------------------------------------------------------
+casting
+
+-codigo de casting
+-nombre
+-fecha de contratacion
+
+-contrato por un solo cliente
+-costo determinado
+
+tipos de casting
+
+*presencial
+-numero de personas qu quiere el cliente
+-varias fases(minimo 1)
+	-numero de cada casting
+	-fecha de inicio
+-candidatos numero de identificacion
+
+por cada prueba
+-fecha
+-sala de celebracion
+-descripcion
+
+agente del casting
+-numero de empleado
+-DNI
+-nombre
+-direccion
+
+
+----------Candidatos
+-codigo
+-nombre
+-direccion
+-telefono de contacto
+-fecha de nacimiento
+-biografia
+-perfil(codigo de perfil)
+	-provincia
+	-sexo
+	-rango de altura
+	-rango de edad
+	-color de pelo
+	-color de ojos
+	-especialidad (modelo o actor)
+	-experiencia (si o no)
+
+distinguir entre dos tipos de cadidato
+
+*adultos
+-DNI
+
+*niños
+-nombre del padre o tutor
+
+algunos cadidatos tienen un representante
+-NIF
+-nombre
+-telefono
+-direccion
+
+*on-line
+
+
+
+------Contrataciones
+almacenamiento de necesidades(perfil que requieren)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
