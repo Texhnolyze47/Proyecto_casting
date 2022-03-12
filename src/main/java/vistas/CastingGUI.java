@@ -4,6 +4,14 @@
  */
 package vistas;
 
+import modelo.TipoCasting;
+
+import controlador.*;
+
+import javax.swing.JTextField;
+import modelo.Casting;
+import modelo.CastingDao;
+
 /**
  *
  * @author golos
@@ -162,6 +170,16 @@ public class CastingGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarActionPerformed
+        String nombre = getTxtCastingNombre().getText();
+        String descripcion = getTxtDireccionCasting().getText();
+        String fechaContratacion = getTxtFechaContratacionCasting().getText();
+        String precio = getTxtPrecioCasting().getText();
+        String tipoCasting = getTxtTipoCasting().getText();
+        CastingDao castingDao = new CastingDao();
+        Casting castingNuevo =  new Casting(nombre, descripcion, fechaContratacion, precio, tipoCasting);
+        castingDao.insertar(castingNuevo);
+        
+        
         SeleccionCandidatoGUI selectCandidato = new SeleccionCandidatoGUI();
         selectCandidato.setVisible(true);
         this.dispose();        // TODO add your handling code here:

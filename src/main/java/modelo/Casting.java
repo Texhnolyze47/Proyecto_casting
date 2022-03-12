@@ -5,8 +5,8 @@ public class Casting {
 	String nombre;
 	String Descripcion;
 	String fechaContratacion;
-	float precio;
-	TipoCasting tipoCasting;
+	String precio;
+	String tipoCasting;
 	
 
 	public Casting() {
@@ -18,6 +18,10 @@ public class Casting {
 		Descripcion = descripcion;
 		this.fechaContratacion = fechaContratacion;
 	}
+
+    Casting(int idCasting, String nombre, String descripcion, String fechaContratacion, String precio, String tipoCasting) {
+        
+    }
 
 	public String getNombre() {
 		return nombre;
@@ -38,6 +42,23 @@ public class Casting {
 	public String getFechaContratacion() {
 		return fechaContratacion;
 	}
+
+        public String getPrecio() {
+            return precio;
+        }
+
+        public String getTipoCasting() {
+            return tipoCasting;
+        }
+        
+
+        public void setPrecio(String precio) {
+            this.precio = precio;
+        }
+
+        public void setTipoCasting(String tipoCasting) {
+            this.tipoCasting = tipoCasting;
+        }
 
 	public void setFechaContratacion(String fechaContratacion) {
 		this.fechaContratacion = fechaContratacion;
