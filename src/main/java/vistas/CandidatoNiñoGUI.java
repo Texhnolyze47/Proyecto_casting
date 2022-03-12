@@ -4,6 +4,14 @@
  */
 package vistas;
 
+import javax.swing.JTextField;
+import modelo.*;
+import modelo.CandidatoDaoNino;
+import modelo.Perfil;
+import modelo.PerfilDao;
+import modelo.Representante;
+import modelo.RepresentanteDaon;
+
 /**
  *
  * @author golos
@@ -435,6 +443,38 @@ public class CandidatoNiñoGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_txtNomTutorNiñoActionPerformed
 
     private void btnRegistrarCandidatoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarCandidatoActionPerformed
+        String nombre = getTxtNomAdultoNiño().getText(); 
+        String direccion = getTxtNomDireccionNiño().getText();
+        String telefono =  getTxtNomTelNiño().getText();
+        String fechaNacimineto = getTxtNomNaciNiño().getText();
+        String nombre_tutor =  getTxtNomTutorNiño().getText();
+        
+        String provincia = getTxtNomProvinciaNiño().getText();
+        String sexo = getTxtNomSexoNiño().getText();
+        String altura = getTxtNomEdadNiño().getText();
+        String edad = getTxtNomEdadNiño().getText();
+        String color_piel = getTxtNomPielNiño().getText();
+        String color_ojos = getTxtNomOjosNiño().getText();
+        String especialidad = getTxtNomEspecialidadNiño().getText();
+        String experencia = getTxtNomExperienNiño().getText();     
+        
+        String nombre_r = getTxtRepreNomNiño().getText();
+        String direccion_r = getTxtRepreDireccionNiño().getText();
+        String telefono_r = getTxtRepreTelNiño().getText();
+        
+        
+        CandidatoDaoNino  candidatoDaoNino = new CandidatoDaoNino();
+        Candidatonino candidatoeNuevo =  new Candidatonino(nombre,direccion,telefono,fechaNacimineto,nombre_tutor);
+        candidatoDaoNino.insertar(candidatoeNuevo);
+        
+        PerfilDao perfil = new PerfilDao();
+        Perfil perfilNuevo =  new Perfil(provincia,sexo,altura,edad,color_piel,color_ojos,especialidad,experencia);
+        perfil.insertar(perfilNuevo);
+        
+        RepresentanteDaon  representanteDao = new RepresentanteDaon();
+        Representante representanteNuevo =  new Representante(nombre_r, direccion_r, telefono_r);
+        representanteDao.insertar(representanteNuevo);
+        
         PruebaGUI pruebaGui = new PruebaGUI();
         pruebaGui.setVisible(true);
         this.dispose();        // TODO add your handling code here:
@@ -534,4 +574,68 @@ public class CandidatoNiñoGUI extends javax.swing.JFrame {
     private javax.swing.JTextField txtRepreNomNiño;
     private javax.swing.JTextField txtRepreTelNiño;
     // End of variables declaration//GEN-END:variables
+
+    public JTextField getTxtNomAdultoNiño() {
+        return txtNomAdultoNiño;
+    }
+
+    public JTextField getTxtNomAlturaNiño() {
+        return txtNomAlturaNiño;
+    }
+
+    public JTextField getTxtNomDireccionNiño() {
+        return txtNomDireccionNiño;
+    }
+
+    public JTextField getTxtNomEdadNiño() {
+        return txtNomEdadNiño;
+    }
+
+    public JTextField getTxtNomEspecialidadNiño() {
+        return txtNomEspecialidadNiño;
+    }
+
+    public JTextField getTxtNomExperienNiño() {
+        return txtNomExperienNiño;
+    }
+
+    public JTextField getTxtNomNaciNiño() {
+        return txtNomNaciNiño;
+    }
+
+    public JTextField getTxtNomOjosNiño() {
+        return txtNomOjosNiño;
+    }
+
+    public JTextField getTxtNomPielNiño() {
+        return txtNomPielNiño;
+    }
+
+    public JTextField getTxtNomProvinciaNiño() {
+        return txtNomProvinciaNiño;
+    }
+
+    public JTextField getTxtNomSexoNiño() {
+        return txtNomSexoNiño;
+    }
+
+    public JTextField getTxtNomTelNiño() {
+        return txtNomTelNiño;
+    }
+
+    public JTextField getTxtNomTutorNiño() {
+        return txtNomTutorNiño;
+    }
+
+    public JTextField getTxtRepreDireccionNiño() {
+        return txtRepreDireccionNiño;
+    }
+
+    public JTextField getTxtRepreNomNiño() {
+        return txtRepreNomNiño;
+    }
+
+    public JTextField getTxtRepreTelNiño() {
+        return txtRepreTelNiño;
+    }
 }

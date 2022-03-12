@@ -4,9 +4,10 @@
  */
 package vistas;
 
-import modelo.TipoCasting;
+import modelo.*;
 
 import controlador.*;
+import javax.swing.JTextArea;
 
 import javax.swing.JTextField;
 import modelo.Casting;
@@ -171,12 +172,12 @@ public class CastingGUI extends javax.swing.JFrame {
 
     private void btnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarActionPerformed
         String nombre = getTxtCastingNombre().getText();
-        String descripcion = getTxtDireccionCasting().getText();
-        String fechaContratacion = getTxtFechaContratacionCasting().getText();
-        String precio = getTxtPrecioCasting().getText();
-        String tipoCasting = getTxtTipoCasting().getText();
+        String descripcion = getTxtCastingDescripcion().getText();
+        String fechaContratacion = getTxtCastingFecha().getText();
+        String precio = getTxtCastingCosto().getText();
+        //String tipoCasting = getTxtTipoCasting().getText();
         CastingDao castingDao = new CastingDao();
-        Casting castingNuevo =  new Casting(nombre, descripcion, fechaContratacion, precio, tipoCasting);
+        Casting castingNuevo =  new Casting(nombre, descripcion, fechaContratacion, precio);
         castingDao.insertar(castingNuevo);
         
         
@@ -241,4 +242,20 @@ public class CastingGUI extends javax.swing.JFrame {
     private javax.swing.JTextField txtCastingFecha;
     private javax.swing.JTextField txtCastingNombre;
     // End of variables declaration//GEN-END:variables
+
+    public JTextField getTxtCastingCosto() {
+        return txtCastingCosto;
+    }
+
+    public JTextArea getTxtCastingDescripcion() {
+        return txtCastingDescripcion;
+    }
+
+    public JTextField getTxtCastingFecha() {
+        return txtCastingFecha;
+    }
+
+    public JTextField getTxtCastingNombre() {
+        return txtCastingNombre;
+    }
 }
