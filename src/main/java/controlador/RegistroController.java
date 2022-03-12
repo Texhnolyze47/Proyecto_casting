@@ -8,6 +8,6 @@ package controlador;
  *
  * @author Ivan
  */
-public class RegisterController {
+public class RegistroController {
     
 }
