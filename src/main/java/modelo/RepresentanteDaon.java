@@ -17,16 +17,17 @@ import static modelo.Conexion.getConnection;
  *
  * @author Ivan
  */
-public class CandidatoDao {
-    	private static final String  SQL_SELECT =  "SELECT id, nombre, direccion, telefono, fecha_nacimiento , DNI FROM candidato_adulto";
-	private static final String  SQL_INSERT =  "INSERT  INTO candidato_adulto (nombre, direccion, telefono, fecha_nacimiento , DNI) VALUES(?, ? , ? , ?,?)";
-	
-        	public List<Candidato> selecccionar(){
+public class RepresentanteDaon {
+    
+    private static final String  SQL_SELECT =  "SELECT id ,nombre,direccion ,telefono FROM representante ";
+    private static final String  SQL_INSERT =  "INSERT INTO representante (nombre,direccion ,telefono) VALUES(?, ? , ? )";
+    
+    public List<Representante> selecccionar(){
 		Connection conn = null;
 		PreparedStatement  stmt = null;
 		ResultSet rs = null;
-		Candidato candidato = null;
-		List<Candidato> candidatos = new ArrayList<Candidato>();
+		Representante representante = null;
+		List<Representante> Representantes = new ArrayList<Representante>();
 		
 		try {
 			conn = getConnection();
@@ -37,13 +38,11 @@ public class CandidatoDao {
 				String nombre = rs.getString("nombre");
 				String direccion = rs.getString("direccion");
 				String telefono = rs.getNString("telefono");
-				String fechaNacimiento = rs.getString("fecha_nacimiento");
-               // String fotografia = rs.getString("fotografia");
-                String DNI =  rs.getString("DNI");
+		
 
-				candidato = new Candidato(id, nombre, direccion, telefono, fechaNacimiento , DNI);
+				representante = new Representante(id, nombre,direccion,telefono);
 				
-				candidatos.add(candidato);
+				Representantes.add(representante);
 				
 			}
 		} catch (SQLException e) {
@@ -60,24 +59,21 @@ public class CandidatoDao {
 				e.printStackTrace(System.out);
 			}
 		}
-		return candidatos;
+		return Representantes;
 	}
                 
-        	public int  insertar (Candidato candidato) {
+        	public int  insertar (Representante representante) {
 		Connection conn = null;
 		PreparedStatement stmt = null;
-		int registros2 = 0;
+		int registros= 0;
 		try {
 			conn = getConnection();
 			stmt = conn.prepareStatement(SQL_INSERT);
-			stmt.setString(1, candidato.getNombre());
-			stmt.setString(2, candidato.getDirrecion());
-			stmt.setString(3, candidato.getTelefono());
-			stmt.setString(4, candidato.getFechaNacimiento());
-			//stmt.setString(5, candidato.setFoto());
-            stmt.setString(5, candidato.getDNI());
+			stmt.setString(1, representante.getNombre());
+			stmt.setString(2, representante.getDireccion());
+			stmt.setString(3, representante.getTelefono());
 	
-			registros2 = stmt.executeUpdate();
+			registros = stmt.executeUpdate();
 			
 		} catch (SQLException e) {
 			e.printStackTrace(System.out);
@@ -91,6 +87,6 @@ public class CandidatoDao {
 				e.printStackTrace(System.out);
 			}
 		}
-		return registros2;
+		return registros;
 	}        
 }

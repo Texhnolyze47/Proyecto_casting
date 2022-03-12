@@ -4,9 +4,14 @@
  */
 package vistas;
 
-import java.io.File;
-import javax.swing.JFileChooser;
+
+import javax.swing.JTextField;
+import modelo.Candidato;
 import modelo.CandidatoDao;
+import modelo.Perfil;
+import modelo.PerfilDao;
+import modelo.Representante;
+import modelo.RepresentanteDaon;
 
 /**
  *
@@ -449,14 +454,37 @@ public class CandidatoAdultoGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnRegistrarCandidatoActionPerformed
 
     private void btnRegistrarCandidato1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarCandidato1ActionPerformed
-        String nombre = txtNomAdultoCandidato.getText(); 
-        String direccion = txtDireccionRepreCandidato.getText();
-        String telefono =  txtNomTelCandidato.getText();
-        String fechaNacimineto = txtNomNaciCandidato.getText();
-        //String foto =  txt
-        String dni =  txtNomDNICandidato.getText();
+        String nombre = getTxtNomAdultoCandidato().getText(); 
+        String direccion = getTxtDireccionRepreCandidato().getText();
+        String telefono =  getTxtNomTelCandidato().getText();
+        String fechaNacimineto = getTxtNomNaciCandidato().getText();
+        String dni =  getTxtNomDNICandidato().getText();
+        
+        String provincia = getTxtNomProvinciaCandidato().getText();
+        String sexo = getTxtNomSexoCandidato().getText();
+        String altura = getTxtNomAlturaCandidato().getText();
+        String edad = getTxtNomEdadCandidato().getText();
+        String color_piel = getTxtNomPielCandidato().getText();
+        String color_ojos = getTxtNomOjosCandidato().getText();
+        String especialidad = getTxtNomEspecialidadCandidato().getText();
+        String experencia = getTxtNomExperienCandidato().getText();     
+        
+        String nombre_r = getTxtNomRepreCandidato().getText();
+         String direccion_r = getTxtDireccionRepreCandidato().getText();
+          String telefono_r = getTxtRepreTelCandidato().getText();
+        
+        
         CandidatoDao  candidatoDao = new CandidatoDao();
-        Canditato clienteNuevo =  new Candidato(nombre,direccion,telefono,fechaNacimineto,dni);
+        Candidato candidatoeNuevo =  new Candidato(nombre,direccion,telefono,fechaNacimineto,dni);
+        candidatoDao.insertar(candidatoeNuevo);
+        
+        PerfilDao perfil = new PerfilDao();
+        Perfil perfilNuevo =  new Perfil(provincia,sexo,altura,edad,color_piel,color_ojos,especialidad,experencia);
+        perfil.insertar(perfilNuevo);
+        
+        RepresentanteDaon  representanteDao = new RepresentanteDaon();
+        Representante representanteNuevo =  new Representante(nombre_r, direccion_r, telefono_r);
+        representanteDao.insertar(representanteNuevo);
         
         PruebaGUI pruebaGui = new PruebaGUI();
         pruebaGui.setVisible(true);
@@ -552,4 +580,68 @@ public class CandidatoAdultoGUI extends javax.swing.JFrame {
     private javax.swing.JTextField txtNomTelCandidato;
     private javax.swing.JTextField txtRepreTelCandidato;
     // End of variables declaration//GEN-END:variables
+
+    public JTextField getTxtDireccionRepreCandidato() {
+        return txtDireccionRepreCandidato;
+    }
+
+    public JTextField getTxtNomAdultoCandidato() {
+        return txtNomAdultoCandidato;
+    }
+
+    public JTextField getTxtNomAlturaCandidato() {
+        return txtNomAlturaCandidato;
+    }
+
+    public JTextField getTxtNomDNICandidato() {
+        return txtNomDNICandidato;
+    }
+
+    public JTextField getTxtNomDireccionCandidato() {
+        return txtNomDireccionCandidato;
+    }
+
+    public JTextField getTxtNomEdadCandidato() {
+        return txtNomEdadCandidato;
+    }
+
+    public JTextField getTxtNomEspecialidadCandidato() {
+        return txtNomEspecialidadCandidato;
+    }
+
+    public JTextField getTxtNomExperienCandidato() {
+        return txtNomExperienCandidato;
+    }
+
+    public JTextField getTxtNomNaciCandidato() {
+        return txtNomNaciCandidato;
+    }
+
+    public JTextField getTxtNomOjosCandidato() {
+        return txtNomOjosCandidato;
+    }
+
+    public JTextField getTxtNomPielCandidato() {
+        return txtNomPielCandidato;
+    }
+
+    public JTextField getTxtNomProvinciaCandidato() {
+        return txtNomProvinciaCandidato;
+    }
+
+    public JTextField getTxtNomRepreCandidato() {
+        return txtNomRepreCandidato;
+    }
+
+    public JTextField getTxtNomSexoCandidato() {
+        return txtNomSexoCandidato;
+    }
+
+    public JTextField getTxtNomTelCandidato() {
+        return txtNomTelCandidato;
+    }
+
+    public JTextField getTxtRepreTelCandidato() {
+        return txtRepreTelCandidato;
+    }
 }

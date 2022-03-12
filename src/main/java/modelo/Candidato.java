@@ -38,8 +38,8 @@ public class Candidato {
         this.foto = foto;
         this.DNI = DNI;
     }
-
-    public Candidato(int id, String nombre, String dirrecion, String telefono, String fechaNacimiento, String DNI) {
+    
+      public Candidato(int id, String nombre, String dirrecion, String telefono, String fechaNacimiento, String DNI) {
         this.id = id;
         this.nombre = nombre;
         this.dirrecion = dirrecion;
@@ -47,10 +47,14 @@ public class Candidato {
         this.fechaNacimiento = fechaNacimiento;
         this.DNI = DNI;
     }
+    public Candidato(String nombre, String dirrecion, String telefono, String fechaNacimiento, String DNI) {
     
-    
- 
-    
+        this.nombre = nombre;
+        this.dirrecion = dirrecion;
+        this.telefono = telefono;
+        this.fechaNacimiento = fechaNacimiento;
+        this.DNI = DNI;
+    }
     
 
     public int getId() {

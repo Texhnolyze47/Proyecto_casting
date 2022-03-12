@@ -230,6 +230,7 @@ public class ClienteGUI extends javax.swing.JFrame {
          String telefono = getTxtTelefonoCliente().getText();
          String contactoCliente = getTxtContactoCliente().getText();
          String actividad = getTxtActividadCliente().getText();
+         
          ClienteDao clienteDao = new ClienteDao();
          Cliente clienteNuevo =  new Cliente(nombre, direccion, telefono, contactoCliente , actividad);
          clienteDao.insertar(clienteNuevo);
