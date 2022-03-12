@@ -81,6 +81,11 @@ public class DashboardGUI extends javax.swing.JFrame {
         btnCasting.setForeground(new java.awt.Color(255, 255, 255));
         btnCasting.setText("Nuevo Casting");
         btnCasting.setBorder(null);
+        btnCasting.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCastingActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -205,6 +210,12 @@ public class DashboardGUI extends javax.swing.JFrame {
         selectCandidato.setVisible(true);
         this.dispose();// TODO add your handling code here:
     }//GEN-LAST:event_btnCandidatoActionPerformed
+
+    private void btnCastingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCastingActionPerformed
+        CastingGUI castingGui = new CastingGUI();
+        castingGui.setVisible(true);
+        this.dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCastingActionPerformed
 
     /**
      * @param args the command line arguments
