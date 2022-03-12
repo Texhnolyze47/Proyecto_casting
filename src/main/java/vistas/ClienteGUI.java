@@ -2,7 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.mx.gui;
+package vistas;
+
+import com.mx.datos.ClienteDao;
+import modelo.Cliente;
+import com.mysql.cj.xdevapi.Client;
 
 /**
  *
@@ -15,6 +19,8 @@ public class ClienteGUI extends javax.swing.JFrame {
      */
     public ClienteGUI() {
         initComponents();
+        Cliente cliente =  new Cliente();
+        ClienteDao dao =  new ClienteDao();
     }
 
     /**
@@ -55,6 +61,12 @@ public class ClienteGUI extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Nombre");
+
+        txtNombreCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNombreClienteActionPerformed(evt);
+            }
+        });
 
         jLabel3.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -221,6 +233,12 @@ public class ClienteGUI extends javax.swing.JFrame {
         dashGui.setVisible(true);
         this.dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void txtNombreClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreClienteActionPerformed
+        // TODO add your handling code here:
+        String nombre = txtNombreCliente.getText();
+        
+    }//GEN-LAST:event_txtNombreClienteActionPerformed
 
     /**
      * @param args the command line arguments
