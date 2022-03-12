@@ -2,7 +2,7 @@ package controlador;
 
 import java.util.List;
 
-import com.mx.datos.ClienteDao;
+import modelo.ClienteDao;
 import modelo.Cliente;
 
 public class TestCliente {

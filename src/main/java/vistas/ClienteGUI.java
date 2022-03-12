@@ -4,9 +4,10 @@
  */
 package vistas;
 
-import com.mx.datos.ClienteDao;
+import modelo.ClienteDao;
 import modelo.Cliente;
 import com.mysql.cj.xdevapi.Client;
+import javax.swing.JTextField;
 
 /**
  *
@@ -19,8 +20,6 @@ public class ClienteGUI extends javax.swing.JFrame {
      */
     public ClienteGUI() {
         initComponents();
-        Cliente cliente =  new Cliente();
-        ClienteDao dao =  new ClienteDao();
     }
 
     /**
@@ -274,6 +273,26 @@ public class ClienteGUI extends javax.swing.JFrame {
                 new ClienteGUI().setVisible(true);
             }
         });
+    }
+
+    public JTextField getTxtActividadCliente() {
+        return txtActividadCliente;
+    }
+
+    public JTextField getTxtContactoCliente() {
+        return txtContactoCliente;
+    }
+
+    public JTextField getTxtDireccionCliente() {
+        return txtDireccionCliente;
+    }
+
+    public JTextField getTxtNombreCliente() {
+        return txtNombreCliente;
+    }
+
+    public JTextField getTxtTelefonoCliente() {
+        return txtTelefonoCliente;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
