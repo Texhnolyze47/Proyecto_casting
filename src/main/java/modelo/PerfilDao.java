@@ -13,10 +13,7 @@ import java.util.List;
 import static modelo.Conexion.close;
 import static modelo.Conexion.getConnection;
 
-/**
- *
- * @author Ivan
- */
+
 public class PerfilDao {
     private static final String  SQL_SELECT =  "SELECT id, provincia, sexo , altura, edad ,color_piel,color_ojos,especialidad,experiencia DNI FROM perfil ";
     private static final String  SQL_INSERT =  "INSERT  INTO perfil (provincia, sexo , altura, edad ,color_piel,color_ojos,especialidad,experiencia) VALUES(?, ? , ? , ?,?,?,?,?)";

@@ -12,10 +12,7 @@ import modelo.PerfilDao;
 import modelo.Representante;
 import modelo.RepresentanteDaon;
 
-/**
- *
- * @author golos
- */
+
 public class CandidatoNiñoGUI extends javax.swing.JFrame {
 
     /**

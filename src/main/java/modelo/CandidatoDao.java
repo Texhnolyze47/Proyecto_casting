@@ -13,10 +13,7 @@ import java.util.List;
 import static modelo.Conexion.close;
 import static modelo.Conexion.getConnection;
 
-/**
- *
- * @author Ivan
- */
+
 public class CandidatoDao {
     	private static final String  SQL_SELECT =  "SELECT id, nombre, direccion, telefono, fecha_nacimiento , DNI FROM candidato_adulto";
 	private static final String  SQL_INSERT =  "INSERT  INTO candidato_adulto (nombre, direccion, telefono, fecha_nacimiento , DNI) VALUES(?, ? , ? , ?,?)";
@@ -38,8 +35,7 @@ public class CandidatoDao {
 				String direccion = rs.getString("direccion");
 				String telefono = rs.getNString("telefono");
 				String fechaNacimiento = rs.getString("fecha_nacimiento");
-               // String fotografia = rs.getString("fotografia");
-                String DNI =  rs.getString("DNI");
+                                String DNI =  rs.getString("DNI");
 
 				candidato = new Candidato(id, nombre, direccion, telefono, fechaNacimiento , DNI);
 				

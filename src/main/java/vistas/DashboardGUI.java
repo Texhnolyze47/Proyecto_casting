@@ -4,10 +4,7 @@
  */
 package vistas;
 
-/**
- *
- * @author golos
- */
+
 public class DashboardGUI extends javax.swing.JFrame {
 
     /**

@@ -4,10 +4,7 @@
  */
 package modelo;
 
-/**
- *
- * @author Ivan
- */
+
 public class Candidatonino {
     int id;
     String nombre;

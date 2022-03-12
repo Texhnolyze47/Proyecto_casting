@@ -13,10 +13,7 @@ import java.util.List;
 import static modelo.Conexion.close;
 import static modelo.Conexion.getConnection;
 
-/**
- *
- * @author Ivan
- */
+
 public class RepresentanteDaon {
     
     private static final String  SQL_SELECT =  "SELECT id ,nombre,direccion ,telefono FROM representante ";

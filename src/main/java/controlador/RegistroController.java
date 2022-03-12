@@ -11,10 +11,7 @@ import modelo.Cliente;
 import modelo.ClienteDao;
 import vistas.*;
 
-/**
- *
- * @author Ivan
- */
+
 public class RegistroController {
     public static ClienteGUI ventana = new ClienteGUI();
     public static void mostrar(){ventana.setVisible(true); }

@@ -4,10 +4,7 @@
  */
 package vistas;
 
-/**
- *
- * @author golos
- */
+
 public class SeleccionCandidatoGUI extends javax.swing.JFrame {
 
     /**

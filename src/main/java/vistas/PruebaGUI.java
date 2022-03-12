@@ -4,10 +4,7 @@
  */
 package vistas;
 
-/**
- *
- * @author golos
- */
+
 public class PruebaGUI extends javax.swing.JFrame {
 
     /**

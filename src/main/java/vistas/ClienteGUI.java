@@ -10,10 +10,7 @@ import controlador.*;
 import javax.swing.JTextField;
 
 
-/**
- *
- * @author golos
- */
+
 public class ClienteGUI extends javax.swing.JFrame {
 
     /**

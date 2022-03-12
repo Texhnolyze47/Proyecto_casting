@@ -4,10 +4,6 @@
  */
 package vistas;
 
-/**
- *
- * @author golos
- */
 public class CastingIndividualGUI extends javax.swing.JFrame {
 
     /**
