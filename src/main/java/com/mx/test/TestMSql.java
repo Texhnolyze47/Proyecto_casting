@@ -1,19 +1,12 @@
 package com.mx.test;
 
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-
-import com.mx.gui.Candidato;
 
 
 public class TestMSql {
 
 	public static void main(String[] args) {
 		
-		Candidato guiCandidato = new Candidato();
 
 		//  String  url =  "jdbc:mysql://localhost:3306/casting?useSSL=false&useTimezone=UTC&?allowPublicKeyRetrieval=true";
 

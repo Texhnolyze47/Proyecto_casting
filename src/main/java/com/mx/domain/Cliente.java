@@ -8,9 +8,6 @@ public class Cliente {
 	String personaContacto;
 	String actividadRealizar;
 	
-	
-	
-	
 	public Cliente() {
 		
 	}
