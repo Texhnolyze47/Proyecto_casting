@@ -1,4 +1,4 @@
-package com.mx.domain;
+package modelo;
 
 public enum Actividad {
 	PUBLICIDAD, MODA

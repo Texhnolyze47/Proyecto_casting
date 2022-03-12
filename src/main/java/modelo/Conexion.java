@@ -1,4 +1,4 @@
-package com.mx.datos;
+package modelo;
 
 import java.sql.*;
 import java.sql.DriverManager;

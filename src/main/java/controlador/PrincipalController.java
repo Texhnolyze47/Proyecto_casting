@@ -4,14 +4,14 @@
  */
 package controlador;
 
-import vistas.*;
+import vistas.DashboardGUI;
 
 /**
  *
  * @author Ivan
  */
-public class Principal {
-    public static void main(String[] args) {
-        PrincipalController.mostrar();
-    }
+public class PrincipalController {
+    public static DashboardGUI ventana = new DashboardGUI();
+    public static void mostrar(){ventana.setVisible(true); }
+    public static void ocultar(){ventana.setVisible(false);}
 }
