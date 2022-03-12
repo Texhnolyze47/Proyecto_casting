@@ -53,6 +53,11 @@ public class DashboardGUI extends javax.swing.JFrame {
         btnCliente.setForeground(new java.awt.Color(255, 255, 255));
         btnCliente.setText("Nuevo Cliente");
         btnCliente.setBorder(null);
+        btnCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnClienteActionPerformed(evt);
+            }
+        });
 
         btnContrato.setBackground(new java.awt.Color(31, 29, 71));
         btnContrato.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
@@ -65,6 +70,11 @@ public class DashboardGUI extends javax.swing.JFrame {
         btnCandidato.setForeground(new java.awt.Color(255, 255, 255));
         btnCandidato.setText("Nuevo Candidato");
         btnCandidato.setBorder(null);
+        btnCandidato.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCandidatoActionPerformed(evt);
+            }
+        });
 
         btnCasting.setBackground(new java.awt.Color(31, 29, 71));
         btnCasting.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
@@ -183,6 +193,18 @@ public class DashboardGUI extends javax.swing.JFrame {
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
         System.exit(WIDTH);        // TODO add your handling code here:
     }//GEN-LAST:event_btnSalirActionPerformed
+
+    private void btnClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClienteActionPerformed
+        ClienteGUI clienteGui = new ClienteGUI();
+        clienteGui.setVisible(true);
+        this.dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_btnClienteActionPerformed
+
+    private void btnCandidatoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCandidatoActionPerformed
+        SeleccionCandidatoGUI selectCandidato = new SeleccionCandidatoGUI();
+        selectCandidato.setVisible(true);
+        this.dispose();// TODO add your handling code here:
+    }//GEN-LAST:event_btnCandidatoActionPerformed
 
     /**
      * @param args the command line arguments

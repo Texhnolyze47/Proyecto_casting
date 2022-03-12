@@ -173,7 +173,14 @@
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>
                       <Component id="btnRegistrarCandidato" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="165" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace pref="981" max="32767" attributes="0"/>
+                          <Component id="btnRegistrarCandidato1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="155" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -250,9 +257,16 @@
                           <Component id="jLabel15" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="txtNomExperienCandidato" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="134" max="32767" attributes="0"/>
+                      <EmptySpace pref="144" max="32767" attributes="0"/>
                       <Component id="btnRegistrarCandidato" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace pref="495" max="32767" attributes="0"/>
+                          <Component id="btnRegistrarCandidato1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -461,6 +475,23 @@
             <Component class="javax.swing.JButton" name="btnRegistrarCandidato">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="33" green="33" red="ff" type="rgb"/>
+                </Property>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="14" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Cancelar"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRegistrarCandidatoActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="btnRegistrarCandidato1">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="e4" green="bb" red="16" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -472,7 +503,7 @@
                 <Property name="text" type="java.lang.String" value="Registrar"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRegistrarCandidatoActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRegistrarCandidato1ActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>

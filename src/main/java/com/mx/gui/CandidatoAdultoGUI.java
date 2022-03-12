@@ -58,6 +58,7 @@ public class CandidatoAdultoGUI extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         txtNomExperienCandidato = new javax.swing.JTextField();
         btnRegistrarCandidato = new javax.swing.JButton();
+        btnRegistrarCandidato1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -147,13 +148,23 @@ public class CandidatoAdultoGUI extends javax.swing.JFrame {
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setText("Experiencia");
 
-        btnRegistrarCandidato.setBackground(new java.awt.Color(22, 187, 228));
+        btnRegistrarCandidato.setBackground(new java.awt.Color(255, 51, 51));
         btnRegistrarCandidato.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnRegistrarCandidato.setForeground(new java.awt.Color(255, 255, 255));
-        btnRegistrarCandidato.setText("Registrar");
+        btnRegistrarCandidato.setText("Cancelar");
         btnRegistrarCandidato.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRegistrarCandidatoActionPerformed(evt);
+            }
+        });
+
+        btnRegistrarCandidato1.setBackground(new java.awt.Color(22, 187, 228));
+        btnRegistrarCandidato1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnRegistrarCandidato1.setForeground(new java.awt.Color(255, 255, 255));
+        btnRegistrarCandidato1.setText("Registrar");
+        btnRegistrarCandidato1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegistrarCandidato1ActionPerformed(evt);
             }
         });
 
@@ -229,7 +240,12 @@ public class CandidatoAdultoGUI extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnRegistrarCandidato)
-                .addGap(165, 165, 165))
+                .addGap(34, 34, 34))
+            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                    .addContainerGap(981, Short.MAX_VALUE)
+                    .addComponent(btnRegistrarCandidato1)
+                    .addGap(155, 155, 155)))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -288,9 +304,14 @@ public class CandidatoAdultoGUI extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel15)
                     .addComponent(txtNomExperienCandidato, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 134, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 144, Short.MAX_VALUE)
                 .addComponent(btnRegistrarCandidato)
-                .addGap(53, 53, 53))
+                .addGap(43, 43, 43))
+            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                    .addContainerGap(495, Short.MAX_VALUE)
+                    .addComponent(btnRegistrarCandidato1)
+                    .addGap(43, 43, 43)))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -341,8 +362,14 @@ public class CandidatoAdultoGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_txtNomDNICandidatoActionPerformed
 
     private void btnRegistrarCandidatoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarCandidatoActionPerformed
-        // TODO add your handling code here:
+        DashboardGUI dashGui = new DashboardGUI();
+        dashGui.setVisible(true);
+        this.dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_btnRegistrarCandidatoActionPerformed
+
+    private void btnRegistrarCandidato1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarCandidato1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnRegistrarCandidato1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -384,6 +411,7 @@ public class CandidatoAdultoGUI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnRegistrarCandidato;
+    private javax.swing.JButton btnRegistrarCandidato1;
     private javax.swing.JButton btnSeleccionarFoto;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;

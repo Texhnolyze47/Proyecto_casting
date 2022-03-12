@@ -173,6 +173,9 @@
                   <Border info="null"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnClienteActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnContrato">
               <Properties>
@@ -207,6 +210,9 @@
                   <Border info="null"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCandidatoActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnCasting">
               <Properties>
