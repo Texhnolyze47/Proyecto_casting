@@ -19,7 +19,19 @@ public class ClienteDao {
 		List<Cliente> clientes = new ArrayList<Cliente>();
 		
 		try {
-			
+			conn = Conexion.getConnection();
+			stmt = conn.prepareStatement(SQL_SELECT);
+			rs = stmt.executeQuery();
+			while (rs.next()) {
+				int idPersona = rs.getInt("id_persona");
+				String nombreC = rs.getString("nombre");
+				String direccion = rs.getString("direccion");
+				String telefono = rs.getNString("persona-contacto");
+				String actividad = rs.getString("actividad");
+				cliente = new Cliente(idPersona, nombreC, direccion, telefono,actividad);
+		
+				
+			}
 		} catch (Exception e) {
 			// TODO: handle exception
 		}

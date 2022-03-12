@@ -6,7 +6,7 @@ public class Cliente {
 	String dirrecion;
 	String telefono;
 	String personaContacto;
-	Actividad actividadRealizar;
+	String actividadRealizar;
 	
 	
 	
@@ -15,7 +15,7 @@ public class Cliente {
 		
 	}
 	public Cliente(String nombre, String dirrecion, String telefono, String personaContacto,
-			Actividad actividadRealizar) {
+			String actividadRealizar) {
 		super();
 		this.nombre = nombre;
 		this.dirrecion = dirrecion;
@@ -47,10 +47,10 @@ public class Cliente {
 	public void setPersonaContacto(String personaContacto) {
 		this.personaContacto = personaContacto;
 	}
-	public Actividad getActividadRealizar() {
+	public String getActividadRealizar() {
 		return actividadRealizar;
 	}
-	public void setActividadRealizar(Actividad actividadRealizar) {
+	public void setActividadRealizar(String actividadRealizar) {
 		this.actividadRealizar = actividadRealizar;
 	}
 	@Override
