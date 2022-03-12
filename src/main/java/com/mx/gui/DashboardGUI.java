@@ -64,6 +64,11 @@ public class DashboardGUI extends javax.swing.JFrame {
         btnContrato.setForeground(new java.awt.Color(255, 255, 255));
         btnContrato.setText("Nuevo Contrato");
         btnContrato.setBorder(null);
+        btnContrato.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnContratoActionPerformed(evt);
+            }
+        });
 
         btnCandidato.setBackground(new java.awt.Color(31, 29, 71));
         btnCandidato.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
@@ -216,6 +221,12 @@ public class DashboardGUI extends javax.swing.JFrame {
         castingGui.setVisible(true);
         this.dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_btnCastingActionPerformed
+
+    private void btnContratoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnContratoActionPerformed
+        ContratoGUI contratoGui = new ContratoGUI();
+        contratoGui.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnContratoActionPerformed
 
     /**
      * @param args the command line arguments
