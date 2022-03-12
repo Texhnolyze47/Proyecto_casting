@@ -9,6 +9,8 @@ import modelo.TipoCasting;
 import controlador.*;
 
 import javax.swing.JTextField;
+import modelo.Casting;
+import modelo.CastingDao;
 
 /**
  *
@@ -168,14 +170,14 @@ public class CastingGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarActionPerformed
-        String nombre = getTxtNombreCasting().getText();
+        String nombre = getTxtCastingNombre().getText();
         String descripcion = getTxtDireccionCasting().getText();
         String fechaContratacion = getTxtFechaContratacionCasting().getText();
         String precio = getTxtPrecioCasting().getText();
         String tipoCasting = getTxtTipoCasting().getText();
         CastingDao castingDao = new CastingDao();
         Casting castingNuevo =  new Casting(nombre, descripcion, fechaContratacion, precio, tipoCasting);
-        CastingDao.insertar(castingNuevo);
+        castingDao.insertar(castingNuevo);
         
         
         SeleccionCandidatoGUI selectCandidato = new SeleccionCandidatoGUI();
