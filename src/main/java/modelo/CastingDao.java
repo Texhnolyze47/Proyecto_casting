@@ -15,7 +15,7 @@ public class CastingDao {
 	private static final String  SQL_SELECT =  "SELECT id, nombre, descripcion, fecha, precio, tipoCasting FROM casting";
 	private static final String  SQL_INSERT =  "INSERT  INTO casting ( nombre, descripcion, fecha, precio, tipoCasting) VALUES(?, ? , ? , ?, ? )";
 	
-	public List<Cliente> selecccionar(){
+	public Casting selecccionar(){
 		Connection conn = null;
 		PreparedStatement  stmt = null;
 		ResultSet rs = null;
@@ -52,7 +52,7 @@ public class CastingDao {
 				e.printStackTrace(System.out);
 			}
 		}
-		return Casting;
+		return casting;
 	}
 	
 	public int  insertar (Casting casting) {

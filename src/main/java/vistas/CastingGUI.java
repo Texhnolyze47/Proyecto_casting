@@ -168,14 +168,14 @@ public class CastingGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarActionPerformed
-        String nombre = getTxtNombreCliente().getText();
-        String direccion = getTxtDireccionCliente().getText();
-        String telefono = getTxtTelefonoCliente().getText();
-        String contactoCliente = getTxtContactoCliente().getText();
-        String actividad = getTxtActividadCliente().getText();
-        CastingDao clienteDao = new CastingDao();
-        Casting clienteNuevo =  new Casting(nombre, descripcion, fechaContratacion, precio, tipoCasting);
-        castingDao.insertar(clienteNuevo);
+        String nombre = getTxtNombreCasting().getText();
+        String descripcion = getTxtDireccionCasting().getText();
+        String fechaContratacion = getTxtFechaContratacionCasting().getText();
+        String precio = getTxtPrecioCasting().getText();
+        String tipoCasting = getTxtTipoCasting().getText();
+        CastingDao castingDao = new CastingDao();
+        Casting castingNuevo =  new Casting(nombre, descripcion, fechaContratacion, precio, tipoCasting);
+        CastingDao.insertar(castingNuevo);
         
         
         SeleccionCandidatoGUI selectCandidato = new SeleccionCandidatoGUI();
