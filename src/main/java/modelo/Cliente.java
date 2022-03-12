@@ -1,4 +1,4 @@
-package com.mx.domain;
+package modelo;
 
 public class Cliente {
 	

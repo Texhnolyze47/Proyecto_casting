@@ -1,9 +1,9 @@
-package com.mx.test;
+package controlador;
 
 import java.util.List;
 
 import com.mx.datos.ClienteDao;
-import com.mx.domain.Cliente;
+import modelo.Cliente;
 
 public class TestCliente {
 	public static void main(String[] args) {

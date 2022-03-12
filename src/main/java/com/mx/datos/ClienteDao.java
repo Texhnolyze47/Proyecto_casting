@@ -6,7 +6,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import static com.mx.datos.Conexion.*;
-import com.mx.domain.Cliente;
+import modelo.Cliente;
 
 
 public class ClienteDao {
