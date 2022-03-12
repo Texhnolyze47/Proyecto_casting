@@ -12,30 +12,30 @@ import modelo.Casting;
 
 public class CastingDao {
 	
-	private static final String  SQL_SELECT =  "SELECT id, nombre, descripcion, fechaContratacion, precio, tipoCasting FROM clientes";
-	private static final String  SQL_INSERT =  "INSERT  INTO clientes ( nombre, descripcion, fechaContratacion, precio, tipoCasting) VALUES(?, ? , ? , ?, ?  )";
+	private static final String  SQL_SELECT =  "SELECT id, nombre, descripcion, fecha, precio, tipoCasting FROM casting";
+	private static final String  SQL_INSERT =  "INSERT  INTO casting ( nombre, descripcion, fecha, precio, tipoCasting) VALUES(?, ? , ? , ?, ? )";
 	
 	public List<Cliente> selecccionar(){
 		Connection conn = null;
 		PreparedStatement  stmt = null;
 		ResultSet rs = null;
 		Casting casting = null;
-		List<Casting> castings = new ArrayList<Casting>();
+		List<Casting> casting = new ArrayList<Casting>();
 		
 		try {
 			conn = getConnection();
 			stmt = conn.prepareStatement(SQL_SELECT);
 			rs = stmt.executeQuery();
 			while (rs.next()) {
-				int idPersona = rs.getInt("id");
+				int idCasting = rs.getInt("idCasting");
 				String nombre = rs.getString("nombre");
-				String descripciion = rs.getString("descripcion");
-				String fechaContrato = rs.getNString("fechaContrato");
+				String descripcion = rs.getString("descripcion");
+				String fechaContratacion = rs.getString("fechaContratacion");
 				String precio = rs.getString("precio");
                                 String tipoCasting = rs.getString("tipoCasting");
-				castings = new Casting(idPersona,nombre, descripcion, fechaContratacion, precio, tipoCasting );
+				casting = new Casting(idCasting, nombre, descripcion, fechaContratacion, precio, tipoCasting);
 				
-				castings.add(casting);
+				casting.add(Casting);
 				
 			}
 		} catch (SQLException e) {
@@ -52,21 +52,21 @@ public class CastingDao {
 				e.printStackTrace(System.out);
 			}
 		}
-		return castings;
+		return casting;
 	}
 	
-	public int  insertar (Cliente cliente) {
+	public int  insertar (Casting casting) {
 		Connection conn = null;
 		PreparedStatement stmt = null;
 		int registros = 0;
 		try {
 			conn = getConnection();
 			stmt = conn.prepareStatement(SQL_INSERT);
-			stmt.setString(1, cliente.getNombre());
-			stmt.setString(2, cliente.getDireccion());
-			stmt.setString(3, cliente.getFechaContratacion());
-			stmt.setString(4, cliente.getPrecio());
-			stmt.setString(5, cliente.getTipoCasting());
+			stmt.setString(1, casting.getNombre());
+			stmt.setString(2, casting.getDescripcion());
+			stmt.setString(3, casting.getFechaContratacion());
+			stmt.setString(4, casting.getPrecio());
+			stmt.setString(5, casting.getTipoCasting());
 	
 			registros = stmt.executeUpdate();
 			

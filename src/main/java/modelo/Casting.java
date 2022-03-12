@@ -39,6 +39,22 @@ public class Casting {
 		return fechaContratacion;
 	}
 
+        public float getPrecio() {
+            return precio;
+        }
+
+        public TipoCasting getTipoCasting() {
+            return tipoCasting;
+        }
+
+    public void setPrecio(float precio) {
+        this.precio = precio;
+    }
+
+    public void setTipoCasting(TipoCasting tipoCasting) {
+        this.tipoCasting = tipoCasting;
+    }
+
 	public void setFechaContratacion(String fechaContratacion) {
 		this.fechaContratacion = fechaContratacion;
 	}
