@@ -20,7 +20,7 @@ public class CastingDao {
 		PreparedStatement  stmt = null;
 		ResultSet rs = null;
 		Casting casting = null;
-		List<Casting> casting = new ArrayList<Casting>();
+		List<Casting> castings = new ArrayList<Casting>();
 		
 		try {
 			conn = getConnection();
@@ -33,9 +33,9 @@ public class CastingDao {
 				String fechaContrato = rs.getNString("fechaContrato");
 				String precio = rs.getString("precio");
                                 String tipoCasting = rs.getString("tipoCasting");
-				casting = new Casting(idPersona,nombre, descripcion, fechaContratacion, precio, tipoCasting );
+				castings = new Casting(idPersona,nombre, descripcion, fechaContratacion, precio, tipoCasting );
 				
-				casting.add(casting);
+				castings.add(casting);
 				
 			}
 		} catch (SQLException e) {
@@ -52,7 +52,7 @@ public class CastingDao {
 				e.printStackTrace(System.out);
 			}
 		}
-		return casting;
+		return castings;
 	}
 	
 	public int  insertar (Cliente cliente) {
