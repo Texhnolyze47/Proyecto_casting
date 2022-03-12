@@ -440,7 +440,9 @@ public class CandidatoAdultoGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnRegistrarCandidatoActionPerformed
 
     private void btnRegistrarCandidato1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarCandidato1ActionPerformed
-        // TODO add your handling code here:
+        PruebaGUI pruebaGui = new PruebaGUI();
+        pruebaGui.setVisible(true);
+        this.dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_btnRegistrarCandidato1ActionPerformed
 
     private void txtDireccionRepreCandidatoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDireccionRepreCandidatoActionPerformed
