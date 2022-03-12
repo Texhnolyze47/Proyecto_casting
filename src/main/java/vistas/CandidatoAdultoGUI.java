@@ -4,6 +4,10 @@
  */
 package vistas;
 
+import java.io.File;
+import javax.swing.JFileChooser;
+import modelo.CandidatoDao;
+
 /**
  *
  * @author golos
@@ -116,6 +120,11 @@ public class CandidatoAdultoGUI extends javax.swing.JFrame {
         btnSeleccionarFoto.setBackground(new java.awt.Color(22, 187, 228));
         btnSeleccionarFoto.setForeground(new java.awt.Color(255, 255, 255));
         btnSeleccionarFoto.setText("Seleccionar foto");
+        btnSeleccionarFoto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSeleccionarFotoActionPerformed(evt);
+            }
+        });
 
         txtNomDNICandidato.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -440,6 +449,15 @@ public class CandidatoAdultoGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnRegistrarCandidatoActionPerformed
 
     private void btnRegistrarCandidato1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarCandidato1ActionPerformed
+        String nombre = txtNomAdultoCandidato.getText(); 
+        String direccion = txtDireccionRepreCandidato.getText();
+        String telefono =  txtNomTelCandidato.getText();
+        String fechaNacimineto = txtNomNaciCandidato.getText();
+        //String foto =  txt
+        String dni =  txtNomDNICandidato.getText();
+        CandidatoDao  candidatoDao = new CandidatoDao();
+        Canditato clienteNuevo =  new Candidato(nombre,direccion,telefono,fechaNacimineto,dni);
+        
         PruebaGUI pruebaGui = new PruebaGUI();
         pruebaGui.setVisible(true);
         this.dispose();        // TODO add your handling code here:
@@ -448,6 +466,11 @@ public class CandidatoAdultoGUI extends javax.swing.JFrame {
     private void txtDireccionRepreCandidatoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDireccionRepreCandidatoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtDireccionRepreCandidatoActionPerformed
+
+    private void btnSeleccionarFotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSeleccionarFotoActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_btnSeleccionarFotoActionPerformed
 
     /**
      * @param args the command line arguments
