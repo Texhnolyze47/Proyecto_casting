@@ -8,12 +8,12 @@ package com.mx.gui;
  *
  * @author golos
  */
-public class Candidato extends javax.swing.JFrame {
+public class CandidatoAdulto extends javax.swing.JFrame {
 
     /**
      * Creates new form Candidato
      */
-    public Candidato() {
+    public CandidatoAdulto() {
         initComponents();
     }
 
@@ -65,7 +65,7 @@ public class Candidato extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Verdana", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Registro de candidato");
+        jLabel1.setText("Registro de candidato Adulto");
 
         jPanel2.setBackground(new java.awt.Color(37, 35, 78));
 
@@ -361,20 +361,21 @@ public class Candidato extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Candidato.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CandidatoAdulto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Candidato.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CandidatoAdulto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Candidato.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CandidatoAdulto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Candidato.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CandidatoAdulto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Candidato().setVisible(true);
+                new CandidatoAdulto().setVisible(true);
             }
         });
     }
