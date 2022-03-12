@@ -7,7 +7,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-public class VentanaPrincipal extends JFrame {
+public class VentanaPrincipalGUI extends JFrame {
 
 	private JPanel contentPane;
 
@@ -16,14 +16,14 @@ public class VentanaPrincipal extends JFrame {
 	 */
 	public static void main(String[] args) {
 
-		VentanaPrincipal frame = new VentanaPrincipal();
+		VentanaPrincipalGUI frame = new VentanaPrincipalGUI();
 		frame.setVisible(true);
 	}
 
 	/**
 	 * Create the frame.
 	 */
-	public VentanaPrincipal() {
+	public VentanaPrincipalGUI() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
