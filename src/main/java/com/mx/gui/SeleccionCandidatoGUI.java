@@ -28,8 +28,8 @@ public class SeleccionCandidatoGUI extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        btnNiño = new javax.swing.JButton();
+        btnAdulto = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -40,23 +40,23 @@ public class SeleccionCandidatoGUI extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Seleccione el Candidato a registrar");
 
-        jButton1.setBackground(new java.awt.Color(31, 29, 71));
-        jButton1.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Candidato Niño");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnNiño.setBackground(new java.awt.Color(31, 29, 71));
+        btnNiño.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
+        btnNiño.setForeground(new java.awt.Color(255, 255, 255));
+        btnNiño.setText("Candidato Niño");
+        btnNiño.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnNiñoActionPerformed(evt);
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(31, 29, 71));
-        jButton2.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Candidato Adulto");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnAdulto.setBackground(new java.awt.Color(31, 29, 71));
+        btnAdulto.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
+        btnAdulto.setForeground(new java.awt.Color(255, 255, 255));
+        btnAdulto.setText("Candidato Adulto");
+        btnAdulto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnAdultoActionPerformed(evt);
             }
         });
 
@@ -79,7 +79,7 @@ public class SeleccionCandidatoGUI extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnNiño, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(32, 32, 32)))
                 .addContainerGap(126, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
@@ -89,7 +89,7 @@ public class SeleccionCandidatoGUI extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(110, 110, 110)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnAdulto, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(568, Short.MAX_VALUE)))
         );
         jPanel1Layout.setVerticalGroup(
@@ -98,14 +98,14 @@ public class SeleccionCandidatoGUI extends javax.swing.JFrame {
                 .addGap(81, 81, 81)
                 .addComponent(jLabel1)
                 .addGap(93, 93, 93)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnNiño, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
                 .addComponent(jButton3)
                 .addGap(48, 48, 48))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                     .addContainerGap(221, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnAdulto, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(125, 125, 125)))
         );
 
@@ -129,17 +129,17 @@ public class SeleccionCandidatoGUI extends javax.swing.JFrame {
         this.dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnAdultoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdultoActionPerformed
         CandidatoAdultoGUI adulto = new CandidatoAdultoGUI();
         adulto.setVisible(true);
         this.dispose();        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnAdultoActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnNiñoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNiñoActionPerformed
         CandidatoNiñoGUI niño = new CandidatoNiñoGUI();
         niño.setVisible(true);
         this.dispose();        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnNiñoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -177,8 +177,8 @@ public class SeleccionCandidatoGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton btnAdulto;
+    private javax.swing.JButton btnNiño;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
