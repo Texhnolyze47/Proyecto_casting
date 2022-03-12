@@ -6,30 +6,34 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import com.mx.gui.Candidato;
+
 
 public class TestMSql {
 
 	public static void main(String[] args) {
 		
-		 String  url =  "jdbc:mysql://localhost:3306/casting?useSSL=false&useTimezone=UTC&allowPublicKeyRetrieval=true";
-		
-		try {
-			Connection conexion = DriverManager.getConnection(url,"root","admin");
-			java.sql.Statement instruccion = conexion.createStatement(); 
-			String sql = "SELECT id,create_time,nombre,direccion,tel_contacto,fecha_nacimiento,tipo_contratacion FROM candidatos";
-			ResultSet  resultado = instruccion.executeQuery(sql);
-			while (resultado.next()) {
-				System.out.println("id Persona:" + resultado.getInt("id"));
-				System.out.println("Nombre:" + resultado.getString("nombre"));
-			}
-			resultado.close();
+		Candidato guiCandidato = new Candidato();
+
+		//  String  url =  "jdbc:mysql://localhost:3306/casting?useSSL=false&useTimezone=UTC&?allowPublicKeyRetrieval=true";
+
+		// try {
+		// 	Connection conexion = DriverManager.getConnection(url,"root","admin");
+		// 	java.sql.Statement instruccion = conexion.createStatement(); 
+		// 	String sql = "SELECT id,create_time,nombre,direccion,tel_contacto,fecha_nacimiento,tipo_contratacion FROM candidatos";
+		// 	ResultSet  resultado = instruccion.executeQuery(sql);
+		// 	while (resultado.next()) {
+		// 		System.out.println("id Persona:" + resultado.getInt("id"));
+		// 		System.out.println("Nombre:" + resultado.getString("nombre"));
+		// 	}
+		// 	resultado.close();
 			
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace(System.out);
-		}
+		// } catch (SQLException e) {
+		// 	// TODO Auto-generated catch block
+		// 	e.printStackTrace(System.out);
+		// }
 		
-		// TODO Auto-generated method stub
+		// // TODO Auto-generated method stub
 
 	}
 

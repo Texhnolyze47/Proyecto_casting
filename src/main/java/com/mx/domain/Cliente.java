@@ -2,9 +2,9 @@ package com.mx.domain;
 
 public class Cliente {
 	
+	int id ;
 	String nombre;
 	String dirrecion;
-	String telefono;
 	String personaContacto;
 	String actividadRealizar;
 	
@@ -14,14 +14,22 @@ public class Cliente {
 	public Cliente() {
 		
 	}
-	public Cliente(String nombre, String dirrecion, String telefono, String personaContacto,
+	public Cliente(int id,String nombre, String dirrecion, String personaContacto,
 			String actividadRealizar) {
 		super();
+		this.id = id;
 		this.nombre = nombre;
 		this.dirrecion = dirrecion;
-		this.telefono = telefono;
 		this.personaContacto = personaContacto;
 		this.actividadRealizar = actividadRealizar;
+	}
+	
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
 	}
 	public String getNombre() {
 		return nombre;
@@ -35,12 +43,7 @@ public class Cliente {
 	public void setDirrecion(String dirrecion) {
 		this.dirrecion = dirrecion;
 	}
-	public String getTelefono() {
-		return telefono;
-	}
-	public void setTelefono(String telefono) {
-		this.telefono = telefono;
-	}
+
 	public String getPersonaContacto() {
 		return personaContacto;
 	}
@@ -53,10 +56,10 @@ public class Cliente {
 	public void setActividadRealizar(String actividadRealizar) {
 		this.actividadRealizar = actividadRealizar;
 	}
+	
 	@Override
 	public String toString() {
-		return "Cliente [nombre=" + nombre + ", dirrecion=" + dirrecion + ", telefono=" + telefono
-				+ ", personaContacto=" + personaContacto + ", actividadRealizar=" + actividadRealizar + "]";
+		return "Cliente [nombre=" + nombre + ", dirrecion=" + dirrecion + ", personaContacto=" + personaContacto + ", actividadRealizar=" + actividadRealizar + "]";
 	}
 	
 	
