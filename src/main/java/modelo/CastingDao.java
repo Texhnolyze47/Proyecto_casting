@@ -20,7 +20,7 @@ public class CastingDao {
 		PreparedStatement  stmt = null;
 		ResultSet rs = null;
 		Casting casting = null;
-		List<Casting> casting = new ArrayList<Casting>();
+		List<Casting> Casting = new ArrayList<Casting>();
 		
 		try {
 			conn = getConnection();
@@ -35,7 +35,7 @@ public class CastingDao {
                                 String tipoCasting = rs.getString("tipoCasting");
 				casting = new Casting(idCasting, nombre, descripcion, fechaContratacion, precio, tipoCasting);
 				
-				casting.add(Casting);
+				Casting.add(casting);
 				
 			}
 		} catch (SQLException e) {
@@ -52,7 +52,7 @@ public class CastingDao {
 				e.printStackTrace(System.out);
 			}
 		}
-		return casting;
+		return Casting;
 	}
 	
 	public int  insertar (Casting casting) {
