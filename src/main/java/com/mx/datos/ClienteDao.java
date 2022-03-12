@@ -12,6 +12,7 @@ import com.mx.domain.Cliente;
 public class ClienteDao {
 	
 	private static final String  SQL_SELECT =  "SELECT id, nombre, direccion, telefono, persona_contacto, actividad FROM clientes";
+	private static final String  SQL_INSERT =  "INSERT  INTO clientes ( nombre, direccion, telefono, persona_contacto, actividad) VALUES(?, ? , ? , ?, ?  )";
 	
 	public List<Cliente> selecccionar(){
 		Connection conn = null;
@@ -50,5 +51,35 @@ public class ClienteDao {
 			}
 		}
 		return clientes;
+	}
+	
+	public int  insertar (Cliente cliente) {
+		Connection conn = null;
+		PreparedStatement stmt = null;
+		int registros = 0;
+		try {
+			conn = getConnection();
+			stmt = conn.prepareStatement(SQL_INSERT);
+			stmt.setString(1, cliente.getNombre());
+			stmt.setString(2, cliente.getDireccion());
+			stmt.setString(3, cliente.getTelefono());
+			stmt.setString(4, cliente.getPersonaContacto());
+			stmt.setString(5, cliente.getActividadRealizar());
+	
+			registros = stmt.executeUpdate();
+			
+		} catch (Exception e) {
+			e.printStackTrace(System.out);
+		}
+		finally {
+			try {
+				close(stmt);
+				close(conn);
+
+			} catch (SQLException e) {
+				e.printStackTrace(System.out);
+			}
+		}
+		return registros;
 	}
 }
